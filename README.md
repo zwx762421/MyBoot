@@ -9,7 +9,8 @@ GeneratorConfig生成mapper以及pojo、MyBatis（CRUD、Pagehelper、自定义M
 
 ## 特点
 
-Wiki针对性介绍各个功能点的具体实现
+Wiki针对性介绍各个功能点的具体实现（wiki为本人码云同项目）
+地址： https://gitee.com/copy_admin/AllStartOfSpringBoot/wikis
 
 ## 下载地址
 
