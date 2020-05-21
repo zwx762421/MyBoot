@@ -10,7 +10,7 @@
             <property name="mappers" value="com.myself.sbdemo.util.MyMapper"/>
         </plugin>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/sbdemo"
+                        connectionURL="jdbc:mysql://localhost:3306/mytable"
                         userId="root"
                         password="root">
         </jdbcConnection>
