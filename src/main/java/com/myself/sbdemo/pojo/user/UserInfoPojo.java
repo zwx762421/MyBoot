@@ -1,29 +1,28 @@
-package com.myself.sbdemo.api.io;
+package com.myself.sbdemo.pojo.user;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.data.repository.NoRepositoryBean;
 
-import java.io.Serializable;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 /**
- * 用户入参IO
+ * 用户pojo
  */
+@Table(name = "USER_INFO")
 @Data
-public class UserIo implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class UserInfoPojo {
 
     /**
      * 用户名
      */
-    @NotBlank(message = "用户名不能为空")
+    @Id
     private String userId;
+
 
     /**
      * 密码
      */
-    @NotBlank(message = "密码不能为空")
     private String passWord;
 
     /**
@@ -44,7 +43,6 @@ public class UserIo implements Serializable {
     /**
      * Email
      */
-    @NotBlank(message = "邮箱不能为空")
     private String email;
 
     /**
@@ -53,8 +51,7 @@ public class UserIo implements Serializable {
     private String name;
 
     /**
-     *  用户类型
+     * 用户类别
      */
     private String userType;
-
 }

@@ -1,4 +1,4 @@
-package com.myself.sbdemo.controller;
+package com.myself.sbdemo.controller.user;
 
 import com.myself.sbdemo.api.io.UserIo;
 import com.myself.sbdemo.service.UserInfoService;
