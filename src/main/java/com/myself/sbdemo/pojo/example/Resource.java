@@ -1,4 +1,4 @@
-package com.myself.sbdemo.pojo;
+package com.myself.sbdemo.pojo.example;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

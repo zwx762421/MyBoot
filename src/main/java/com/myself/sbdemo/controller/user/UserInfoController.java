@@ -1,6 +1,7 @@
 package com.myself.sbdemo.controller.user;
 
-import com.myself.sbdemo.api.io.UserIo;
+import com.myself.sbdemo.api.user.io.LoginIo;
+import com.myself.sbdemo.api.user.io.UserIo;
 import com.myself.sbdemo.service.UserInfoService;
 import com.myself.sbdemo.util.MyselfJSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,21 @@ public class UserInfoController {
     @Autowired
     private UserInfoService userInfoService;
 
-    @RequestMapping("/insert")
-    MyselfJSONResult insert(@RequestBody UserIo userIo){
+    /**
+     * 用户注册
+     * @param userIo
+     */
+    @RequestMapping("/userAdd")
+    MyselfJSONResult userAdd(@RequestBody UserIo userIo){
         return userInfoService.userAdd(userIo);
+    }
+
+    /**
+     * 用户登录
+     * @param loginIo
+     */
+    @RequestMapping("/userLogin")
+    MyselfJSONResult userLogin(@RequestBody LoginIo loginIo){
+        return userInfoService.userLogin(loginIo);
     }
 }

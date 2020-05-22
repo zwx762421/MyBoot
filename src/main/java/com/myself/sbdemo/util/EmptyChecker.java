@@ -1,4 +1,4 @@
-package com.myself.sbdemo.config;
+package com.myself.sbdemo.util;
 
 import org.springframework.stereotype.Service;
 

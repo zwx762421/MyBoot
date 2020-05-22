@@ -1,6 +1,6 @@
 package com.myself.sbdemo.controller.interceptor;
 
-import com.myself.sbdemo.pojo.SysUser;
+import com.myself.sbdemo.pojo.example.SysUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;

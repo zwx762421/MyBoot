@@ -1,4 +1,4 @@
-package com.myself.sbdemo.pojo;
+package com.myself.sbdemo.pojo.example;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;

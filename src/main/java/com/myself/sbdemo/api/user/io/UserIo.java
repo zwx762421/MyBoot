@@ -1,8 +1,7 @@
-package com.myself.sbdemo.api.io;
+package com.myself.sbdemo.api.user.io;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.data.repository.NoRepositoryBean;
 
 import java.io.Serializable;
 

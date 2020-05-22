@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.myself.sbdemo.mapper.SysUserMapperCustom" >
-  <resultMap id="BaseResultMap" type="com.myself.sbdemo.pojo.SysUser" >
+<mapper namespace="com.myself.sbdemo.mapper.example.SysUserMapperCustom" >
+  <resultMap id="BaseResultMap" type="com.myself.sbdemo.pojo.example.SysUser" >
     <!--
       WARNING - @mbg.generated
     -->
@@ -11,7 +11,7 @@
   </resultMap>
 
   <!-- 查询简单的信息 -->
-  <select id="queryUserSimplyInfoById" resultType="com.myself.sbdemo.pojo.SysUser" parameterType="java.lang.String">
+  <select id="queryUserSimplyInfoById" resultType="com.myself.sbdemo.pojo.example.SysUser" parameterType="java.lang.String">
     SELECT
       id,
       name,

@@ -1,6 +1,6 @@
-package com.myself.sbdemo.controller;
+package com.myself.sbdemo.controller.example;
 
-import com.myself.sbdemo.pojo.SysUser;
+import com.myself.sbdemo.pojo.example.SysUser;
 import com.myself.sbdemo.service.SysUserService;
 import com.myself.sbdemo.util.MyselfJSONResult;
 import org.n3r.idworker.Sid;

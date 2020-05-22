@@ -1,9 +1,9 @@
-package com.myself.sbdemo.service.impl;
+package com.myself.sbdemo.service.impl.example;
 
 import com.github.pagehelper.PageHelper;
-import com.myself.sbdemo.mapper.SysUserMapper;
-import com.myself.sbdemo.mapper.SysUserMapperCustom;
-import com.myself.sbdemo.pojo.SysUser;
+import com.myself.sbdemo.mapper.example.SysUserMapper;
+import com.myself.sbdemo.mapper.example.SysUserMapperCustom;
+import com.myself.sbdemo.pojo.example.SysUser;
 import com.myself.sbdemo.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.myself.sbdemo.service;
 
-import com.myself.sbdemo.pojo.SysUser;
+import com.myself.sbdemo.pojo.example.SysUser;
 
 import java.util.List;
 
