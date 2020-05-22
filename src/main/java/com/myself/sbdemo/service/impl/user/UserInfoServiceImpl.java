@@ -51,16 +51,16 @@ public class UserInfoServiceImpl implements UserInfoService {
         }else if(passWord.length() < 7){
             return MyselfJSONResult.errorMsg(UserRegisterEnum.PASSWORD_TOO_SHORT.getMsg());//密码不能为空且要大于7个字符
         }
-        //第一步：校验用户名是否存在重复
+        //第二步：校验用户名是否存在重复
         if(!emptyChecker.isEmpty(userInfoCommonService.getById(userIo.getUserId()))){
             return MyselfJSONResult.errorMsg(UserRegisterEnum.USER_HAS_REGISTERED.getMsg());//用户名已经被注册
         }
-        //第二步：检验邮箱格式是否正确
+        //第三步：检验邮箱格式是否正确
         String email = userIo.getEmail();
         if (!email.contains("@")){
             return MyselfJSONResult.errorMsg(UserRegisterEnum.ERROR_EMAIL.getMsg());//邮箱格式不正确
         }
-        //第三步：插入操作
+        //第四步：插入操作
         try{
             userInfoCommonService.insert(userInfoPojo);
         }catch(Exception e){
