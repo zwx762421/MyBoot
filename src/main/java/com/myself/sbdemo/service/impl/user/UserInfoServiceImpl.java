@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @Author Zhangweixin
@@ -60,7 +59,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         if (!email.contains("@")){
             return MyselfJSONResult.errorMsg(UserRegisterEnum.ERROR_EMAIL.getMsg());//邮箱格式不正确
         }
-        //第四步：插入操作
+        //第四步：执行插入操作
         try{
             userInfoCommonService.insert(userInfoPojo);
         }catch(Exception e){
