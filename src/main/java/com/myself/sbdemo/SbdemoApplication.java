@@ -16,6 +16,8 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableScheduling
 //开启异步调用方法
 @EnableAsync
+//扫描跨域拦截器包
+@ComponentScan(basePackages={"com.myself.sbdemo.config"})
 public class SbdemoApplication {
 
 	public static void main(String[] args) {
