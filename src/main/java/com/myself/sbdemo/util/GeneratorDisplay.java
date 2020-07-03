@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Mapper、pojo生成器
  * @Author:AwakeningCode
  * @Date: Created in 11:38 2018\3\16 0016
  */
