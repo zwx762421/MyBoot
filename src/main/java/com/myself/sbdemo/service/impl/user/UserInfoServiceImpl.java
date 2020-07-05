@@ -1,5 +1,7 @@
 package com.myself.sbdemo.service.impl.user;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.myself.sbdemo.api.user.io.LoginIo;
 import com.myself.sbdemo.api.user.io.UserIo;
 import com.myself.sbdemo.common.Enum.UserLoginEnum;
@@ -14,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.Date;
 
 /**
  * @Author Zhangweixin
@@ -80,6 +84,14 @@ public class UserInfoServiceImpl implements UserInfoService {
         if(!loginIo.getPassWord().equals(passWord)){
             return MyselfJSONResult.errorMsg(UserLoginEnum.ERROR_PASSWORD.getMsg());//密码或用户名错误
         }
-        return MyselfJSONResult.ok(loginIo.getUserId());//登陆成功
+        //第三步：设置token
+        Date start = new Date();
+        long currentTime = System.currentTimeMillis() + 60* 60 * 1000;//一小时有效时间
+        Date end = new Date(currentTime);
+        String token = "";
+        token = JWT.create().withAudience(loginIo.getUserId()).withIssuedAt(start).withExpiresAt(end)
+                .sign(Algorithm.HMAC256(loginIo.getPassWord()));
+        loginIo.setToken(token);
+        return MyselfJSONResult.ok(loginIo);//登陆成功
     }
 }
