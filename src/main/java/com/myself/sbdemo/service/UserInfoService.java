@@ -2,6 +2,7 @@ package com.myself.sbdemo.service;
 
 import com.myself.sbdemo.api.user.io.LoginIo;
 import com.myself.sbdemo.api.user.io.UserIo;
+import com.myself.sbdemo.api.user.io.getByIdIo;
 import com.myself.sbdemo.util.MyselfJSONResult;
 
 public interface UserInfoService{
@@ -21,4 +22,12 @@ public interface UserInfoService{
       * @Author ZhangWeixin
       */
      MyselfJSONResult userLogin(LoginIo loginIo);
+
+     /**
+      * 根据userId查询用户相关信息
+      * @param getByIdIo
+      * @return
+      * @Author ZhangWeixin
+      */
+     MyselfJSONResult getById(getByIdIo getByIdIo);
 }

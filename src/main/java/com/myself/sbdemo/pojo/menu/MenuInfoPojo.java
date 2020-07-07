@@ -6,9 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 目录pojo
+ */
 @Table(name = "menu_info")
 @Data
-public class MenuInfo {
+public class MenuInfoPojo {
     /**
      * 菜单组件id
      */
@@ -39,5 +42,11 @@ public class MenuInfo {
      */
     @Column(name = "is_inuse")
     private String isInuse;
+
+    /**
+     * url
+     */
+    @Column(name = "url")
+    private String url;
 
 }

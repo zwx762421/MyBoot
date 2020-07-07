@@ -10,9 +10,9 @@
             <property name="mappers" value="com.myself.sbdemo.util.MyMapper"/>
         </plugin>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/mytable"
+                        connectionURL="jdbc:mysql://localhost:3306/admin"
                         userId="root"
-                        password="root">
+                        password="root1">
         </jdbcConnection>
         <!-- 对于生成的pojo所在包 -->
         <javaModelGenerator targetPackage="com.myself.sbdemo.pojo" targetProject="src/main/java"/>
@@ -21,7 +21,7 @@
         <!-- 配置mapper对应的java映射 -->
         <javaClientGenerator targetPackage="com.myself.sbdemo.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
-        <table tableName="sys_user"></table>
+        <table tableName="menu_info"></table>
     </context>
 </generatorConfiguration>
 

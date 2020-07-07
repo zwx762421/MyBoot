@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.myself.sbdemo.api.user.io.LoginIo;
 import com.myself.sbdemo.api.user.io.UserIo;
+import com.myself.sbdemo.api.user.io.getByIdIo;
 import com.myself.sbdemo.common.Enum.UserLoginEnum;
 import com.myself.sbdemo.common.Enum.UserRegisterEnum;
 import com.myself.sbdemo.common.user.UserInfoCommonService;
@@ -93,5 +94,10 @@ public class UserInfoServiceImpl implements UserInfoService {
                 .sign(Algorithm.HMAC256(loginIo.getPassWord()));
         loginIo.setToken(token);
         return MyselfJSONResult.ok(loginIo);//登陆成功
+    }
+
+    @Override
+    public MyselfJSONResult getById(getByIdIo getByIdIo) {
+        return MyselfJSONResult.ok(userInfoCommonService.getById(getByIdIo.getUserId()));
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.myself.sbdemo.mapper.menu.MenuInfoMapper">
-  <resultMap id="BaseResultMap" type="com.myself.sbdemo.pojo.menu.MenuInfo">
+  <resultMap id="BaseResultMap" type="com.myself.sbdemo.pojo.menu.MenuInfoPojo">
     <!--
       WARNING - @mbg.generated
     -->
@@ -10,5 +10,18 @@
     <result column="menu_level" jdbcType="VARCHAR" property="menuLevel" />
     <result column="menu_display_user_type" jdbcType="VARCHAR" property="menuDisplayUserType" />
     <result column="is_inuse" jdbcType="VARCHAR" property="isInuse" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
   </resultMap>
+
+
+  <!-- 查询权限下菜单及相关信息 -->
+  <select id="queryFirstMenuByCondition" resultType="com.myself.sbdemo.api.menu.vo.MenuInfoVo"
+          parameterType="com.myself.sbdemo.pojo.user.UserInfoPojo">
+    SELECT
+      menu_id as menuId,menu_name as menuName,menu_level as menuLevel,url
+    FROM
+      menu_info
+    WHERE
+      menu_display_user_type = #{userType}
+  </select>
 </mapper>

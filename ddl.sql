@@ -18,5 +18,6 @@ menu_name VARCHAR(32) not null,
 menu_level VARCHAR(4) not null,
 menu_display_user_type VARCHAR(4) not null,
 is_inuse VARCHAR(2) not null,
+url varchar(100),
 PRIMARY KEY(menu_id)
 );

@@ -2,6 +2,7 @@ package com.myself.sbdemo.controller.user;
 
 import com.myself.sbdemo.api.user.io.LoginIo;
 import com.myself.sbdemo.api.user.io.UserIo;
+import com.myself.sbdemo.api.user.io.getByIdIo;
 import com.myself.sbdemo.service.UserInfoService;
 import com.myself.sbdemo.util.MyselfJSONResult;
 import com.sun.management.VMOption;
@@ -33,5 +34,14 @@ public class UserInfoController {
     @RequestMapping("/userLogin")
     MyselfJSONResult userLogin(@RequestBody LoginIo loginIo){
         return userInfoService.userLogin(loginIo);
+    }
+
+    /**
+     * 根据用户Id查询
+     * @param getByIdIo
+     */
+    @RequestMapping("/getById")
+    MyselfJSONResult getById(@RequestBody getByIdIo getByIdIo){
+        return userInfoService.getById(getByIdIo);
     }
 }
